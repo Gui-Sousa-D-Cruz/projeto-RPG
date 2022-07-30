@@ -1,0 +1,208 @@
+<Gerenciador>:
+    Screen:
+        Button:
+            text:'Entrar'
+            on_release: root.current = 'tela1'
+
+    Inventario:
+        name: 'inventario'
+    Status:
+        name: 'status'
+    Tela1:
+        name: 'tela1'
+    Tela2_1:
+        name: 'tela2_1'
+    Tela2_2:
+        name: 'tela2_2'
+    
+
+<Tela1>:
+    BoxLayout:
+        orientation:'vertical'
+        BoxLayout:
+            Label:
+                text:''
+            Label:
+                text:''
+            Label:
+                text:''
+        BoxLayout:
+            Label:
+                id:cena
+                text:'Ao adentrar a pirâmide, você nota diversos hierógrifos na parede, o que deseja fazer?'
+        BoxLayout:
+            Label:
+                text:''
+            Label:
+                text:''
+            Label:
+                text:''
+        BoxLayout:
+            Button:
+                id:bt1
+                text:'Investigar.'
+                on_release: app.root.current = 'tela2_1'
+            Button:
+                id:bt2
+                text:'Passar Direto.'
+                on_release: app.root.current = 'tela2_2'
+        BoxLayout:
+            Button:
+                id:bt3
+                text:'Inventário.'
+                on_release: app.root.current = 'inventario'
+            Button:
+                id:bt4
+                text:'Status.'
+                on_release: app.root.current = 'status'
+        BoxLayout:
+            Button:
+                text:'teste'
+
+            
+
+
+
+<Tela2_1>:
+    BoxLayout:
+        orientation:'vertical'
+        BoxLayout:
+            Label:
+                text:''
+            Label:
+                text:''
+            Label:
+                text:''
+        BoxLayout:
+            Label:
+                id:cena
+                text:'LOREM1'
+        BoxLayout:
+            Label:
+                text:''
+            Label:
+                text:''
+            Label:
+                text:''
+        BoxLayout:
+            Button:
+                id:bt1
+                text:'ACAO1'
+                on_release: app.root.current = ''
+            Button:
+                id:bt2
+                text:'ACAO2'
+                on_release: app.root.current = ''
+        BoxLayout:
+            Button:
+                id:bt3
+                text:'Inventário.'
+                on_release: app.root.current = 'inventario'
+            Button:
+                id:bt4
+                text:'Status.'
+                on_release: app.root.current = 'status'
+        BoxLayout:
+            Button:
+                text:'teste'
+<Tela2_2>:
+    BoxLayout:
+        orientation:'vertical'
+        BoxLayout:
+            Label:
+                text:''
+            Label:
+                text:''
+            Label:
+                text:''
+        BoxLayout:
+            Label:
+                id:cena
+                text:'LOREM2'
+        BoxLayout:
+            Label:
+                text:''
+            Label:
+                text:''
+            Label:
+                text:''
+        BoxLayout:
+            Button:
+                id:bt1
+                text:'ACAO1'
+                on_release: app.root.current = ''
+            Button:
+                id:bt2
+                text:'ACAO2'
+                on_release: app.root.current = ''
+        BoxLayout:
+            Button:
+                id:bt3
+                text:'Inventário.'
+                on_release: app.root.current = 'inventario'
+            Button:
+                id:bt4
+                text:'Status.'
+                on_release: app.root.current = 'status'
+        BoxLayout:
+            Button:
+                text:'teste'
+<Inventario>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            Label:
+                text:'INVENTARIO'
+            
+        BoxLayout:
+            orientation:'vertical'
+            BoxLayout:
+                Label:
+                    text:''
+                Label:
+                    text:''
+                Label:
+                    text:''
+            BoxLayout:
+                orientation:'horizontal'
+                Label:
+                    text:''
+                Label:
+                    text:''
+                Button:
+                    text:'Voltar'
+                    on_release: app.root.current = ''
+                Label:
+                    text:''
+                Label:
+                    text:''
+            
+<Status>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            Label:
+                text:'STATUS'
+            
+        BoxLayout:
+            orientation:'vertical'
+            BoxLayout:
+                Label:
+                    text:''
+                Label:
+                    text:''
+                Label:
+                    text:''
+            BoxLayout:
+                orientation:'horizontal'
+                Label:
+                    text:''
+                Label:
+                    text:''
+                Button:
+                    text:'Voltar'
+                    on_release: app.root.current = ''
+                Label:
+                    text:''
+                Label:
+                    text:''
