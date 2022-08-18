@@ -1,6 +1,7 @@
 import random
 from time import sleep
-import keyboard
+import keyboard 
+
 
 pow = 0
 dex = 0
