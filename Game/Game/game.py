@@ -39,9 +39,6 @@ bau1 = [item1, item2]
 ItemBau1 = random.choice(bau1)
 
 
-v = '\033[1;31m'
-a = '\033[1;34m'
-l = '\033[m'
 
 def linha():
     print('-='*50)
@@ -125,14 +122,13 @@ def d4(crit):
 
 def op(t1, t2):
    op.dec = '| 1-'+ t1 + ' | 2-'+ t2 +' |'
-   print(v,op.dec,l)
-
+   print(op.dec)
 
 linha()
 nome = input('Qual é seu nome, viajante? ').strip()
 linha()
 
-print(f'{a}Escolha uma classe:{l} {v}| 1-Guerreiro | 2-Mago | 3-Ladino | 4-Clérigo |{l} ')
+print(f'Escolha uma classe: | 1-Guerreiro | 2-Mago | 3-Ladino | 4-Clérigo | ')
 linha()
 
 classes()
@@ -261,7 +257,7 @@ if escolha.act == 1:
             print(f'Você tomou {d4.d4} de dano e está agora com {d4.life} de vida')
             hp -= d4.dano                                               
 else:
-    print(f'{v}Game Over!{l}')            
+    print('Game Over!')            
 linha()
 
 sleep(1)
@@ -302,7 +298,7 @@ else:
             if escolha.act == 1:
                 pass
             else:
-                print(f'{v}Game Over!{l}')
+                print(f'Game Over!')
                 linha()
                 exit()
         else:
@@ -326,14 +322,14 @@ else:
                     if escolha.act == 1:
                         pass
                     else:
-                        print(f'{v}Game Over!{l}')
+                        print(f'Game Over!')
                         linha()
                         exit()
 
                 else:
                     print('A pequena câmara desmorona em cima de você!')
                     linha()
-                    print(f'{v}Game over!{l}')
+                    print(f'Game over!')
                     linha()
                     exit()
             
@@ -344,7 +340,7 @@ else:
                 escolha()
                 sleep(1)
                 if escolha.act == 1:
-                    print(f'{a}Você equipou: {ItemBau1.nome}!{l}')
+                    print(f'Você equipou: {ItemBau1.nome}!')
                     print(lista)
                     pow += ItemBau1.pow
                     dex += ItemBau1.dex
@@ -370,13 +366,13 @@ else:
                         if escolha.act == 1:
                             pass
                         else:
-                            print(f'{v}Game Over!{l}')
+                            print(f'Game Over!')
                             linha()
                             exit()
                     else:
                         print('A pequena câmara desmorona em cima de você!')
                         linha()
-                        print(f'{v}Game Over!{l}')
+                        print(f'Game Over!')
                         linha()
                         exit()
                 else:
@@ -394,13 +390,13 @@ else:
                         if escolha.act == 1:
                             pass
                         else:
-                            print(f'{v}Game Over!{l}')
+                            print(f'Game Over!')
                             linha()
                             exit()
                     else:
                         print('A pequena câmara desmorona em cima de você!')
                         linha()
-                        print(f'{v}Game Over!{l}')
+                        print(f'Game Over!')
                         linha()
                         exit()
                     
