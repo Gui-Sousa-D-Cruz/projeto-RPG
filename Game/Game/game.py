@@ -10,10 +10,10 @@ int = 0
 sab = 0
 car = 0
 lbase = 10
-life = 10 + con
-hp = life
+hp = lbase + con
 
-lista = [pow, dex, con , int, sab, car, lbase, life, hp]
+
+lista = [pow, dex, con , int, sab, car, lbase, hp]
 
 class Item:
     def __init__(self,nome, pow, dex, con, int, sab, car, life):
@@ -45,37 +45,31 @@ def linha():
 
 
 def classes():
-    loop = True
-    while loop:
+    
+    while True:
         if keyboard.is_pressed('1'):
             classes.classe = 'guerreiro'
-            loop = False
             break
         elif keyboard.is_pressed('2'):
             classes.classe = 'mago'
-            loop = False
             break
         elif keyboard.is_pressed('3'):
             classes .classe = 'ladino'
-            loop = False
             break       
         elif keyboard.is_pressed('4'):
             classes.classe = 'clérigo'
-            loop = False
             break
 
 
 def escolha(): #escolha de ação
     escolha.act = 0
-    loop = True
-    while loop:
+
+    while True:
         if keyboard.is_pressed('1'):
             escolha.act = 1
-            loop = False
             break
         elif keyboard.is_pressed('2'):
             escolha.act = 2
-            loop = False
             break
         
            
@@ -111,7 +105,7 @@ def d20(scss, atrib):
 def d4(crit):
     d4.d4 = random.randint(1, 4)
     d4.d4_2 = random.randint(1, 4)
-    d4.life = life
+    d4.life = hp
     if crit == False:
         d4.life -= d4.d4
         d4.dano = d4.d4 + d4.d4_2
@@ -146,7 +140,7 @@ if classes.classe.upper() == 'MAGO':
     int = 4
     sab = 4
     car = 1
-    life = life + con
+    hp = lbase + con
 if classes.classe.upper() == 'GUERREIRO':
     print('Você escolheu a classe: Guerreiro!')
     pow = 4
@@ -155,7 +149,7 @@ if classes.classe.upper() == 'GUERREIRO':
     int = 3
     sab = 1
     car = 2
-    life = life + con
+    hp = lbase + con
 if classes.classe.upper() == 'LADINO':
     print('Você escolheu a classe: Ladino!')
     pow = 1
@@ -164,7 +158,7 @@ if classes.classe.upper() == 'LADINO':
     int = 3
     sab = 2
     car = 4
-    life = life + con
+    hp = lbase + con
 if classes.classe.upper() == 'CLERIGO' or classes.classe.upper() == 'CLÉRIGO':
     print('Você escolheu a classe: Clérigo')
     pow = 0
@@ -173,7 +167,7 @@ if classes.classe.upper() == 'CLERIGO' or classes.classe.upper() == 'CLÉRIGO':
     int = 3
     sab = 4
     car = 4
-    life = life + con
+    hp = lbase + con
 linha()
 
 sleep(1)
