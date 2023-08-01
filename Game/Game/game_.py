@@ -409,19 +409,26 @@ while True:
             d4(True)
             dano = d4.d4
             hp -= dano
-            porcentagem(hp,hpmax,mana,manamax)
-            hp = porcentagem.hp
-            porcHP = porcentagem.porcHP
-            porcMANA = porcentagem.porcMANA
-            janela7 = janela_7_2()
-            janela6.hide()
-            hist('janela7')
-            print(hp)
+            if dano > hp:
+                sg.popup(f'''Você anda pelo corredor, esbarrando em todas as plihas de ossos, até que você ouve um barulho de engrenagem, então são disparados diversos dardos ao longo do corredor! 
+                         Recebeu {dano} de dano
+                         Você Morreu!''')
+                janela.close()
+            else:
+                porcentagem(hp,hpmax,mana,manamax)
+                hp = porcentagem.hp
+                porcHP = porcentagem.porcHP
+                porcMANA = porcentagem.porcMANA
+                janela7 = janela_7_2()
+                janela6.hide()
+                hist('janela7')
+                print(hp)
 
 
     #
     
     if janela == janela7:
+        
         pass
     
     
